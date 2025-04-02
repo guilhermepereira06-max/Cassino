@@ -1,6 +1,6 @@
 ﻿namespace Roleta
 {
-    partial class Form1
+    partial class frmCacaNiquel
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -33,7 +33,9 @@
             this.lblNiquel1 = new System.Windows.Forms.Label();
             this.lblNiquel2 = new System.Windows.Forms.Label();
             this.lblNiquel3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tmrSorteio_Geral = new System.Windows.Forms.Timer(this.components);
+            this.btnJogar = new System.Windows.Forms.Button();
+            this.tmrNiquel = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnGirar
@@ -76,16 +78,35 @@
             this.lblNiquel3.TabIndex = 3;
             this.lblNiquel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // tmrSorteio_Geral
+            // 
+            this.tmrSorteio_Geral.Tick += new System.EventHandler(this.tmrSorteioGeral_Tick);
+            // 
+            // btnJogar
+            // 
+            this.btnJogar.Location = new System.Drawing.Point(212, 178);
+            this.btnJogar.Name = "btnJogar";
+            this.btnJogar.Size = new System.Drawing.Size(75, 23);
+            this.btnJogar.TabIndex = 4;
+            this.btnJogar.Text = "&Jogar";
+            this.btnJogar.UseVisualStyleBackColor = true;
+            this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
+            // 
+            // tmrNiquel
+            // 
+            this.tmrNiquel.Tick += new System.EventHandler(this.tmrNiquel_Tick);
+            // 
+            // frmCacaNiquel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 298);
+            this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.lblNiquel3);
             this.Controls.Add(this.lblNiquel2);
             this.Controls.Add(this.lblNiquel1);
             this.Controls.Add(this.btnGirar);
-            this.Name = "Form1";
+            this.Name = "frmCacaNiquel";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -97,7 +118,9 @@
         private System.Windows.Forms.Label lblNiquel1;
         private System.Windows.Forms.Label lblNiquel2;
         private System.Windows.Forms.Label lblNiquel3;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmrSorteio_Geral;
+        private System.Windows.Forms.Button btnJogar;
+        private System.Windows.Forms.Timer tmrNiquel;
     }
 }
 
