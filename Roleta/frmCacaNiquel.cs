@@ -50,7 +50,7 @@ namespace Roleta
         private void btnGirar_Click(object sender, EventArgs e)
         {
             int niquel1 = 0, niquel2 = 0, niquel3 = 0;
-            MostraNiquel(niquel1, niquel2, niquel3);
+            MostraNiquel();
         }
         private void tmrNiquel_Tick(object sender, EventArgs e)
         {
@@ -72,7 +72,7 @@ namespace Roleta
             }
             else
             {
-                // atingiu a condição de término
+               // atingiu a condição de término
                 tmrNiquel.Enabled = false;
                 /* MessageBox.Show("Parabéns, você ganhou no Tigrinho!!! \n\n" +
                                "sequencia: " + niquel1.ToString() + " - " +
@@ -84,7 +84,7 @@ namespace Roleta
                 lblNiquel2.Text = String.Empty;
                 lblNiquel3.Text = String.Empty;
                 btnJogar.Text = "&Jogar";
-                lstNiquel.Items.Add(niquel1.ToString() + " - " + niquel2.ToString() + " - " + niquel3.ToString());
+                //lstNiquel.Items.Add(niquel1.ToString() + " - " + niquel2.ToString() + " - " + niquel3.ToString());
                 contaGiro = 0;
                 contaNiquel = 1;
                 if ((niquel1 == niquel2) && (niquel2 == niquel3))
@@ -122,9 +122,15 @@ namespace Roleta
         }
          private Random sorteio = new Random();
         private int niquel1, niquel2, niquel3;
+
+        private void frmCacaNiquel_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private int contaGiro = 0;
         private int contaNiquel = 1; 
         }
     
     }
-}
+

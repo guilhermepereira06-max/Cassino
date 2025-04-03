@@ -108,6 +108,7 @@
             this.Controls.Add(this.btnGirar);
             this.Name = "frmCacaNiquel";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmCacaNiquel_Load);
             this.ResumeLayout(false);
 
         }
