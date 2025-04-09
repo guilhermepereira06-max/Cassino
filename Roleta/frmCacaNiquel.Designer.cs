@@ -36,11 +36,12 @@
             this.tmrSorteio_Geral = new System.Windows.Forms.Timer(this.components);
             this.btnJogar = new System.Windows.Forms.Button();
             this.tmrNiquel = new System.Windows.Forms.Timer(this.components);
+            this.lstNiquel = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnGirar
             // 
-            this.btnGirar.Location = new System.Drawing.Point(105, 179);
+            this.btnGirar.Location = new System.Drawing.Point(12, 168);
             this.btnGirar.Name = "btnGirar";
             this.btnGirar.Size = new System.Drawing.Size(75, 23);
             this.btnGirar.TabIndex = 0;
@@ -84,7 +85,7 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.Location = new System.Drawing.Point(212, 178);
+            this.btnJogar.Location = new System.Drawing.Point(218, 249);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(75, 23);
             this.btnJogar.TabIndex = 4;
@@ -96,11 +97,20 @@
             // 
             this.tmrNiquel.Tick += new System.EventHandler(this.tmrNiquel_Tick);
             // 
+            // lstNiquel
+            // 
+            this.lstNiquel.FormattingEnabled = true;
+            this.lstNiquel.Location = new System.Drawing.Point(145, 148);
+            this.lstNiquel.Name = "lstNiquel";
+            this.lstNiquel.Size = new System.Drawing.Size(120, 95);
+            this.lstNiquel.TabIndex = 5;
+            // 
             // frmCacaNiquel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 298);
+            this.Controls.Add(this.lstNiquel);
             this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.lblNiquel3);
             this.Controls.Add(this.lblNiquel2);
@@ -122,6 +132,7 @@
         private System.Windows.Forms.Timer tmrSorteio_Geral;
         private System.Windows.Forms.Button btnJogar;
         private System.Windows.Forms.Timer tmrNiquel;
+        private System.Windows.Forms.ListBox lstNiquel;
     }
 }
 

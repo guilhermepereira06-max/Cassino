@@ -74,17 +74,17 @@ namespace Roleta
             {
                // atingiu a condição de término
                 tmrNiquel.Enabled = false;
-                /* MessageBox.Show("Parabéns, você ganhou no Tigrinho!!! \n\n" +
+                 /*MessageBox.Show("Parabéns, você ganhou no Tigrinho!!! \n\n" +
                                "sequencia: " + niquel1.ToString() + " - " +
                                               niquel2.ToString() + " - " +
                                               niquel3.ToString(),
                                  "Tigrinho Wins !!!",
-                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation); */
+                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);*/
                 lblNiquel1.Text = String.Empty;
                 lblNiquel2.Text = String.Empty;
                 lblNiquel3.Text = String.Empty;
                 btnJogar.Text = "&Jogar";
-                //lstNiquel.Items.Add(niquel1.ToString() + " - " + niquel2.ToString() + " - " + niquel3.ToString());
+                lstNiquel.Items.Add(niquel1.ToString() + " - " + niquel2.ToString() + " - " + niquel3.ToString());
                 contaGiro = 0;
                 contaNiquel = 1;
                 if ((niquel1 == niquel2) && (niquel2 == niquel3))
