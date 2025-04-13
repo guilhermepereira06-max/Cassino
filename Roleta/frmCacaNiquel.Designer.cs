@@ -41,7 +41,7 @@
             // 
             // btnGirar
             // 
-            this.btnGirar.Location = new System.Drawing.Point(12, 168);
+            this.btnGirar.Location = new System.Drawing.Point(218, 249);
             this.btnGirar.Name = "btnGirar";
             this.btnGirar.Size = new System.Drawing.Size(75, 23);
             this.btnGirar.TabIndex = 0;
@@ -85,9 +85,9 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.Location = new System.Drawing.Point(218, 249);
+            this.btnJogar.Location = new System.Drawing.Point(30, 163);
             this.btnJogar.Name = "btnJogar";
-            this.btnJogar.Size = new System.Drawing.Size(75, 23);
+            this.btnJogar.Size = new System.Drawing.Size(109, 42);
             this.btnJogar.TabIndex = 4;
             this.btnJogar.Text = "&Jogar";
             this.btnJogar.UseVisualStyleBackColor = true;
@@ -118,7 +118,6 @@
             this.Controls.Add(this.btnGirar);
             this.Name = "frmCacaNiquel";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmCacaNiquel_Load);
             this.ResumeLayout(false);
 
         }

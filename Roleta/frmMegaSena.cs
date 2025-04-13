@@ -13,7 +13,6 @@ namespace Roleta
     public partial class frmMegaSena : Form
     {
         //06-Guilherme Hemrique de Souza Pereira
-        //tem que tirar o ultimo traço ainda
         //Inicio da Classe - Criação de objetos, variaveis, tipos que serão privados
         //à classe - que serão visíveis à toda classe
         private Random Mega = new Random();//Mega.Next(1,50);

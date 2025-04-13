@@ -13,13 +13,10 @@ namespace Roleta
 {
     public partial class frmCacaNiquel : Form
     {
-        public partial class Roleta : Form
-        {
-            private Random sorteio = new Random();
-            private int niquel1, niquel2, niquel3;
-            private int contaGiro = 0;
-            private int contaNiquel = 1;
-        }
+        private Random sorteio = new Random();
+        private int niquel1, niquel2, niquel3;
+        private int contaGiro = 0;
+        private int contaNiquel = 1;
         public frmCacaNiquel()
         {
             InitializeComponent();
@@ -89,7 +86,7 @@ namespace Roleta
                 contaNiquel = 1;
                 if ((niquel1 == niquel2) && (niquel2 == niquel3))
                 {
-                    MessageBox.Show("Parabéns, você ganhou um trabalho 6x1 das 8h as 18h sem direito a transporte e ticket de alimentação!!! \n\n" +
+                    MessageBox.Show("VOCÊ GANHOU UM MILHÃO \n\n" +
                               "sequencia: " + niquel1.ToString() + " - " +
                                              niquel2.ToString() + " - " +
                                              niquel3.ToString(),
@@ -98,7 +95,7 @@ namespace Roleta
                 }
                 else if ((niquel1 == niquel2) || (niquel1 == niquel3) || (niquel2 == niquel3))
                 {
-                    MessageBox.Show("Você ganhou uma beterraba!! \n\n" +
+                    MessageBox.Show("VOCÊ GANHOU MEIO MILHÃO \n\n" +
                        "sequencia: " + niquel1.ToString() + " - " +
                                         niquel2.ToString() + " - " +
                                         niquel3.ToString()
@@ -106,7 +103,7 @@ namespace Roleta
                 }
                 else
                 {
-                    MessageBox.Show("Você ganhou um milinho :( \n\n" +
+                    MessageBox.Show("Você ganhou milinho :/, mais sorte na proxima vez\n\n" +
                         "sequencia: " + niquel1.ToString() + " - " +
                                         niquel2.ToString() + " - " +
                                         niquel3.ToString()
@@ -120,16 +117,7 @@ namespace Roleta
                 contaGiro = 0;
             }
         }
-         private Random sorteio = new Random();
-        private int niquel1, niquel2, niquel3;
-
-        private void frmCacaNiquel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private int contaGiro = 0;
-        private int contaNiquel = 1; 
+  
         }
     
     }
