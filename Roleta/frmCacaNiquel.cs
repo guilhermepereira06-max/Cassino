@@ -9,10 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Guilherme Henrique de Souza Pereira-N 6-INF2
 namespace Roleta
 {
     public partial class frmCacaNiquel : Form
     {
+        //Variaveis
         private Random sorteio = new Random();
         private int niquel1, niquel2, niquel3;
         private int contaGiro = 0;
@@ -21,16 +23,19 @@ namespace Roleta
         {
             InitializeComponent();
         }
+        //Relogio do Niquel
         private void tmrSorteioGeral_Tick(object sender, EventArgs e)
         {
             MostraNiquel();
         }
+        //Botão Jogar
         private void btnJogar_Click(object sender, EventArgs e)
         {
             btnJogar.Text = "&STOP";
             tmrNiquel.Enabled = true;
         }
 
+        //Função que vai mostrar o niquel
         private void MostraNiquel()
         {
             niquel1 = sorteio.Next(0, 10);
@@ -43,7 +48,7 @@ namespace Roleta
         }
 
 
-
+        //botão de girar
         private void btnGirar_Click(object sender, EventArgs e)
         {
             int niquel1 = 0, niquel2 = 0, niquel3 = 0;
@@ -51,6 +56,7 @@ namespace Roleta
         }
         private void tmrNiquel_Tick(object sender, EventArgs e)
         {
+            //Verificação de quantas niqueis ja foram
             contaGiro++;
             if (contaNiquel == 1)
             {
@@ -84,6 +90,7 @@ namespace Roleta
                 lstNiquel.Items.Add(niquel1.ToString() + " - " + niquel2.ToString() + " - " + niquel3.ToString());
                 contaGiro = 0;
                 contaNiquel = 1;
+                //verificação dos numeros e mensagens
                 if ((niquel1 == niquel2) && (niquel2 == niquel3))
                 {
                     MessageBox.Show("VOCÊ GANHOU UM MILHÃO \n\n" +
@@ -110,7 +117,7 @@ namespace Roleta
                         );
                 }
             }
-
+            //Giros para poder ir pro proximo niquel
             if (contaGiro == 10)
             {
                 contaNiquel++;
